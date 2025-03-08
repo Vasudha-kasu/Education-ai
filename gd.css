@@ -1,0 +1,39 @@
+/* Custom styles for equal card size */
+.discussion-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensures all cards are of equal height */
+}
+
+.card-img-top {
+    height: 200px; /* Fixed height for the card image */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.card-body {
+    flex-grow: 1; /* Ensures the content expands to fill available space */
+}
+
+.join-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    width: 100%; /* Full width for the join button */
+    margin-top: auto; /* Pushes the button to the bottom of the card */
+}
+
+.join-btn:hover {
+    background-color: #0056b3;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Forces all cards to take the same height */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .video-player {
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+  }
+  
+  video {
+    width: 90%; /* Increased width to make video larger */
+    height: 500px; /* Set a fixed height for the video */
+    display: block;
+  }
+  
+  .video-list {
+    padding: 20px;
+  }
+  
+  .video-list h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .video-list button {
+    display: block;
+    width: auto; /* Reduced size */
+    margin-bottom: 10px;
+    padding: 5px 10px; /* Reduced padding */
+    font-size: 14px; /* Smaller font size */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .video-list button:hover {
+    background-color: #0056b3;
+  }
+  
+  .assignment-button {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .assignment-button button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .assignment-button button:hover {
+    background-color: #218838;
+  }

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentoring Program</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .mentor-card {
+            margin-bottom: 20px;
+        }
+        .contact-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+        }
+        .contact-btn:hover {
+            background-color: #218838;
+        }
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2 class="text-center">Mentoring Program</h2>
+    <p class="text-center">Find a mentor to help you achieve your goals</p>
+
+    <div class="row">
+        <!-- Mentor 1 Card -->
+        <div class="col-md-4">
+            <div class="card mentor-card">
+                <img src="https://img.freepik.com/free-photo/caucasian-supervisor-helping-new-asian-employee_1262-12619.jpg?ga=GA1.1.495489733.1737978106&semt=ais_hybrid" class="card-img-top" alt="Mentor 1">
+                <div class="card-body">
+                    <h5 class="card-title">John Doe</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Software Engineering Mentor</h6>
+                    <p class="card-text">John has over 10 years of experience in the software industry, specializing in full-stack development and cloud technologies.</p>
+                    <button class="btn contact-btn" data-toggle="modal" data-target="#contactModal" onclick="setMentorName('John Doe')">Contact Mentor</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mentor 2 Card -->
+        <div class="col-md-4">
+            <div class="card mentor-card">
+                <img src="https://img.freepik.com/free-photo/business-executives-discussing-laptop_107420-63887.jpg?ga=GA1.1.495489733.1737978106&semt=ais_hybrid" class="card-img-top" alt="Mentor 2">
+                <div class="card-body">
+                    <h5 class="card-title">Jane Smith</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Data Science & AI Mentor</h6>
+                    <p class="card-text">Jane is an expert in machine learning, artificial intelligence, and data analytics, with a strong academic background in computer science.</p>
+                    <button class="btn contact-btn" data-toggle="modal" data-target="#contactModal" onclick="setMentorName('Jane Smith')">Contact Mentor</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mentor 3 Card -->
+        <div class="col-md-4">
+            <div class="card mentor-card">
+                <img src="https://img.freepik.com/premium-photo/bearded-business-mentor-looking-young-colleague-using-laptop-office_562859-1008.jpg?ga=GA1.1.495489733.1737978106&semt=ais_hybrid" class="card-img-top" alt="Mentor 3">
+                <div class="card-body">
+                    <h5 class="card-title">Sarah Lee</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Business & Entrepreneurship Mentor</h6>
+                    <p class="card-text">Sarah has founded several successful startups and is passionate about helping aspiring entrepreneurs grow their businesses.</p>
+                    <button class="btn contact-btn" data-toggle="modal" data-target="#contactModal" onclick="setMentorName('Sarah Lee')">Contact Mentor</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Contacting Mentor -->
+<div class="modal" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">Contact Mentor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to contact <span id="mentor-name"></span>?</p>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Write your message" required></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="submitForm()">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function setMentorName(mentorName) {
+        document.getElementById('mentor-name').innerText = mentorName;
+    }
+
+    function submitForm() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if (name && email && message) {
+            alert('Your message has been sent to the mentor!');
+            $('#contactModal').modal('hide');
+            // You can add further functionality here to handle form submission, such as sending the data to a server
+        } else {
+            alert('Please fill in all fields!');
+        }
+    }
+</script>
+
+</body>
+</html>

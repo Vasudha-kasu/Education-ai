@@ -1,0 +1,104 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and General Layout */
+body {
+  background: linear-gradient(135deg, #8e24aa,  #6b72f5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.login-container, .signup-container {
+  width: 100%;
+  max-width: 480px;
+  padding: 20px;
+}
+
+.login-box, .signup-box {
+  background-color: rgba(24, 24, 24, 0.85);
+  padding: 50px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.login-box h2, .signup-box h2 {
+  color: rgb(208, 208, 208); /* Heading color changed to black */
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #2b2c2d; /* Dark blue background */
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.input-group-text {
+  background: none;
+  border: none;
+  color: black; /* Icon color changed to black */
+  font-size: 18px;
+  padding-right: 10px;
+}
+
+.form-control {
+  background: none;
+  border: none;
+  color: black; /* Input text color changed to black */
+  outline: none;
+  flex: 1;
+  padding-left: 10px;
+}
+
+.form-control::placeholder {
+  color: #555; /* Placeholder color slightly darker */
+}
+
+/* Remove blue outline and border on focus */
+.form-control:focus {
+  background: none;
+  color: black;
+  outline: none; /* Remove the blue outline */
+  border: none; /* Ensure no border */
+}
+
+.login-btn, .signup-btn {
+  background-color: #8e24aa;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+.login-btn:hover, .signup-btn:hover {
+  background-color: #7b1fa2;
+}
+
+a {
+  text-decoration: none;
+  color: blue; /* Updated link color to blue */
+}
+
+a:hover {
+  color: #003366; /* Dark blue on hover */
+}
+
+p {
+  color: rgb(191, 191, 191); /* Set text color for additional messages to black */
+}
+
+

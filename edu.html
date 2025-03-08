@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Learning Platform</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://js.stripe.com/v3/"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Navigation Bar (Now above the header) -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">E-Learn</a>
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="./edu.html" id="home-btn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Home
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="home-btn">
+          <li><a class="dropdown-item" href="./main.html">Profile</a></li>
+          <li><a class="dropdown-item" href="./prepare.html">Preparation</a></li>
+          <li><a class="dropdown-item" href="./quickprep.html">Quick Prep</a></li>
+          <li><a class="dropdown-item" href="https://openai.com/index/chatgpt/">AI Help</a></li>
+          <li><a class="dropdown-item" href="./internship.html">Internship/Job Request</a></li>
+          <li><a class="dropdown-item" href="./gd.html">Group Discussions</a></li>
+          <li><a class="dropdown-item" href="./mentoring.html">Mentoring</a></li>
+          <li><a class="dropdown-item" href="#">Log Out</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./login.html">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./signup.html">Sign Up</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Header Section -->
+<header>
+  <div class="container">
+    <h1>E-Learn Platform</h1>
+    <p>Your learning journey starts here</p>
+  </div>
+</header>
+
+  <!-- Course Section -->
+  <section class="courses py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Popular Courses</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Course 1 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://img.freepik.com/free-photo/busy-woman-working-night-front-computer-taking-notes-writing-notebook-annual-reports-checking-financial-project-focused-employee-using-technology-network-wireless-doing-overtime-job_482257-13382.jpg?t=st=1739097160~exp=1739100760~hmac=3275ffd40706b2cb07aa450bebe1205d38dd251228a0d4fa3e156eabc9db1f3d&w=1380" class="card-img-top" alt="Web Development">
+            <div class="card-body">
+              <h5 class="card-title">Web Development</h5>
+              <p class="card-text">Learn HTML, CSS, JavaScript, and more.</p>
+              <p class="price">$49.99</p>
+              <button class="btn btn-primary purchase-btn" data-course="Web Development">Enroll</button>
+              <a href="./video.html" class="btn btn-success ms-2">Go to Course</a><!-- Go to Course Button -->
+            </div>
+          </div>
+        </div>
+        <!-- Course 2 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://img.freepik.com/free-photo/modern-equipped-computer-lab_23-2149241211.jpg?ga=GA1.1.495489733.1737978106&semt=ais_hybrid" class="card-img-top" alt="Data Science">
+            <div class="card-body">
+              <h5 class="card-title">Data Science</h5>
+              <p class="card-text">Master Python, Machine Learning, and Data Analysis.</p>
+              <p class="price">$59.99</p>
+              <button class="btn btn-primary purchase-btn" data-course="Data Science">Enroll</button>
+              <a href="./video.html" class="btn btn-success ms-2">Go to Course</a> <!-- Go to Course Button -->
+            </div>
+          </div>
+        </div>
+        <!-- Course 3 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://img.freepik.com/free-photo/representation-user-experience-interface-design_23-2150169861.jpg?t=st=1739097223~exp=1739100823~hmac=7c714641cf9a4df6ad8f04c30fe7a26dcfa476aaf0cc4f65c7a72c0b00f76902&w=996" class="card-img-top" alt="AI and Machine Learning">
+            <div class="card-body">
+              <h5 class="card-title">AI and Machine Learning</h5>
+              <p class="card-text">Understand AI algorithms and their applications.</p>
+              <p class="price">$69.99</p>
+              <button class="btn btn-primary purchase-btn" data-course="AI and Machine Learning">Enroll</button>
+              <a href="./video.html" class="btn btn-success ms-2">Go to Course</a> <!-- Go to Course Button -->
+            </div>
+          </div>
+        </div>
+        <!-- Add more courses similarly -->
+        <div class="col">
+            <div class="card h-100">
+              <img src="https://img.freepik.com/free-photo/freelancer-woman-comparing-graphics-from-clipboard-with-grafics-from-computer-business-office_482257-5156.jpg?ga=GA1.1.495489733.1737978106&semt=ais_hybrid" class="card-img-top" alt="AI and Machine Learning">
+              <div class="card-body">
+                <h5 class="card-title">AI and Machine Learning</h5>
+                <p class="card-text">Understand AI algorithms and their applications.</p>
+                <p class="price">$69.99</p>
+                <button class="btn btn-primary purchase-btn" data-course="AI and Machine Learning">Enroll</button>
+                <a href="./video.html" class="btn btn-success ms-2">Go to Course</a> <!-- Go to Course Button -->
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="https://img.freepik.com/free-photo/worker-writing-while-looking-computer-screen_23-2147601422.jpg?t=st=1739097330~exp=1739100930~hmac=8d93b10fe1d0076ff372f96550bcebf06fb42ae48fd751095260c4321726ab0c&w=996" class="card-img-top" alt="AI and Machine Learning">
+              <div class="card-body">
+                <h5 class="card-title">AI and Machine Learning</h5>
+                <p class="card-text">Understand AI algorithms and their applications.</p>
+                <p class="price">$69.99</p>
+                <button class="btn btn-primary purchase-btn" data-course="AI and Machine Learning">Enroll</button>
+                <a href="./video.html" class="btn btn-success ms-2">Go to Course</a> <!-- Go to Course Button -->
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="https://img.freepik.com/free-photo/designer-work-office_158595-1204.jpg?ga=GA1.1.495489733.1737978106&semt=ais_hybrid" class="card-img-top" alt="AI and Machine Learning">
+              <div class="card-body">
+                <h5 class="card-title">AI and Machine Learning</h5>
+                <p class="card-text">Understand AI algorithms and their applications.</p>
+                <p class="price">$69.99</p>
+                <button class="btn btn-primary purchase-btn" data-course="AI and Machine Learning">Enroll</button>
+                <a href="./video.html" class="btn btn-success ms-2">Go to Course</a> <!-- Go to Course Button -->
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  <div id="purchase-form" class="modal fade" tabindex="-1" aria-labelledby="purchaseModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="purchaseModalLabel">Purchase Course</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6 id="course-name"></h6>
+          <form id="payment-form">
+            <div id="card-element"></div>
+            <button type="submit" id="submit-btn" class="btn btn-success mt-3">Pay Now</button>
+          </form>
+          <div id="error-message" class="mt-2 text-danger"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2025 E-Learn. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

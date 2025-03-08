@@ -1,0 +1,56 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #8f9a8f; /* Green background */
+    color: white;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #7eaab8;
+    padding: 15px 0;
+}
+
+/* Container to hold all sections */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Sections Styling */
+section {
+    background: white;
+    padding: 20px;
+    color: black;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+h2 {
+    color: #7eaab8;
+}
+
+/* List Style */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #7eaab8;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}

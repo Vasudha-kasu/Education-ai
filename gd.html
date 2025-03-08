@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gd.css">
+    <title>Discussion Rooms</title>
+    <!-- Add Bootstrap CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .discussion-card {
+            margin-bottom: 20px;
+        }
+        .join-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+        }
+        .join-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2 class="text-center">Ongoing Discussions</h2>
+    
+    <div class="row">
+        <!-- Discussion Card 1 -->
+        <div class="col-md-4">
+            <div class="card discussion-card">
+                <img src="https://img.freepik.com/free-vector/math-science-concept-with-school-lesson-items-retro-cartoon-style_1284-8084.jpg?ga=GA1.1.495489733.1737978106&semt=ais_hybrid" class="card-img-top" alt="Math Discussion">
+                <div class="card-body">
+                    <h5 class="card-title">Mathematics Study Group</h5>
+                    <p class="card-text">Join us to discuss various mathematical problems and share study tips.</p>
+                    <p class="card-text"><small class="text-muted">Participants: 5</small></p>
+                    <button class="btn join-btn" onclick="joinDiscussion('Math')">Join Discussion</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Discussion Card 2 -->
+        <div class="col-md-4">
+            <div class="card discussion-card">
+                <img src="https://img.freepik.com/free-photo/old-book-wooden-table_53876-18285.jpg?ga=GA1.1.495489733.1737978106&semt=ais_hybrid" class="card-img-top" alt="History Discussion">
+                <div class="card-body">
+                    <h5 class="card-title">History Quiz Discussion</h5>
+                    <p class="card-text">Discuss important historical facts and prepare for your upcoming quiz.</p>
+                    <p class="card-text"><small class="text-muted">Participants: 3</small></p>
+                    <button class="btn join-btn" onclick="joinDiscussion('History')">Join Discussion</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Discussion Card 3 -->
+        <div class="col-md-4">
+            <div class="card discussion-card">
+                <img src="https://img.freepik.com/free-vector/sad-girl-working-science-lab_1308-35024.jpg?ga=GA1.1.495489733.1737978106&semt=ais_hybrid" class="card-img-top" alt="Science Discussion">
+                <div class="card-body">
+                    <h5 class="card-title">Science Research Group</h5>
+                    <p class="card-text">Join our research group to discuss the latest scientific findings and projects.</p>
+                    <p class="card-text"><small class="text-muted">Participants: 8</small></p>
+                    <button class="btn join-btn" onclick="joinDiscussion('Science')">Join Discussion</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional: Modal for Joining Discussion (You can customize this as needed) -->
+<div class="modal" id="joinModal" tabindex="-1" role="dialog" aria-labelledby="joinModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="joinModalLabel">Join Discussion</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to join the <span id="discussion-name"></span> discussion?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="confirmJoin()">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function joinDiscussion(discussion) {
+        // Show the modal with the discussion name
+        document.getElementById('discussion-name').innerText = discussion;
+        $('#joinModal').modal('show');
+    }
+
+    function confirmJoin() {
+        // You can add functionality to join the discussion here
+        alert('You have successfully joined the discussion!');
+        $('#joinModal').modal('hide');
+    }
+</script>
+
+</body>
+</html>

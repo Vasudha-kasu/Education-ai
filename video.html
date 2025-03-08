@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Playlist</title>
+  <link rel="stylesheet" href="video.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Video Player -->
+    <div class="video-player">
+      <video id="videoPlayer" controls height="50px">
+        <source src="./video/ai.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Video Playlist -->
+    <div class="video-list">
+      <h3>Course Playlist</h3>
+      <!-- Button to play Static C++ video -->
+      <button onclick="playVideo('./video/ai.mp4')">Static C++</button>
+      <!-- Button to play Uses of Static video -->
+      <button onclick="playVideo('./video/ai(1).mp4')">Uses of Static</button>
+    </div>
+  </div>
+
+  <!-- Assignment Button -->
+  <div class="assignment-button">
+    <button onclick="alert('Assignment button clicked!')">Assignment</button>
+  </div>
+
+  <script>
+    function playVideo(videoPath) {
+      const videoPlayer = document.getElementById('videoPlayer');
+      videoPlayer.src = videoPath; // Set the new video source
+      videoPlayer.load(); // Reload the video element
+      videoPlayer.play(); // Play the video
+    }
+  </script>
+
+</body>
+</html>
