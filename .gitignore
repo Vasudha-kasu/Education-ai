@@ -8,3 +8,4 @@ frontend/build/
 .venv/
 venv/
 .vscode/.vscode/ 
+.vscode/ 
