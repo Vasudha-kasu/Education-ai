@@ -21,7 +21,7 @@ export default function Courses() {
           <div className="text-xs tracking-[0.22em] uppercase text-[#c84c2c] mb-3">Curated YouTube · structured for you</div>
           <h1 className="font-serif-display text-5xl sm:text-6xl font-semibold leading-tight">All courses</h1>
           <p className="mt-3 text-[#1a1c1a]/70 max-w-xl">
-            Six handpicked playlists from India's best educators — turned into trackable, adaptive courses.
+            Handpicked playlists from India's best educators — turned into trackable, adaptive courses.
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
