@@ -38,7 +38,7 @@ export default function Home() {
               at <em className="not-italic underline decoration-[3px] underline-offset-[6px] decoration-[#c84c2c]">your</em> pace.
             </h1>
             <p className="mt-7 text-lg text-[#1a1c1a]/70 max-w-2xl leading-relaxed">
-              Edu-AI Core is a single space where 6 curated YouTube playlists become structured courses,
+              Edu-AI Core is a single space where curated YouTube playlists become structured courses,
               every lesson auto-generates a Bloom-level quiz, and a Gemini tutor answers every doubt — in your language.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
@@ -47,7 +47,7 @@ export default function Home() {
                 data-testid="hero-courses-btn"
                 className="px-7 py-3.5 rounded-full bg-[#1a1c1a] text-[#f5efe4] hover:bg-[#c84c2c] transition-colors text-sm font-medium"
               >
-                Browse 6 free courses <i className="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                Browse free courses <i className="fa-solid fa-arrow-right ml-2 text-xs"></i>
               </Link>
               <Link
                 to="/doubt-solver"
@@ -108,8 +108,7 @@ export default function Home() {
               A loop that gets smarter every lesson.
             </h2>
             <p className="text-[#1a1c1a]/70 leading-relaxed">
-              Watch a lesson → take a Bloom-level quiz → AI promotes or demotes you on the taxonomy → next quiz adapts.
-              You move only as fast as you actually understand.
+              Take a look how it works
             </p>
           </div>
           <ol className="space-y-5">
