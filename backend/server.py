@@ -76,7 +76,7 @@ async def gemini_chat(system_message: str, user_text: str, session_id: str = Non
     client = genai.Client(api_key=api_key)
     try:
         response = client.models.generate_content(
-            model="gemini-2.0-flash",
+            model="gemini-2.5-flash",
             contents=user_text,
             config=types.GenerateContentConfig(system_instruction=system_message)
         )

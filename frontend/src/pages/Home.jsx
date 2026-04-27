@@ -30,7 +30,7 @@ export default function Home() {
           <div className="lg:col-span-8 anim-fade-up">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#1a1c1a]/5 border border-[#1a1c1a]/10 text-xs tracking-wide mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-[#c84c2c] animate-pulse"></span>
-              Adaptive learning · powered by Gemini
+              Adaptive learning powered by AI tutors
             </div>
             <h1 className="font-serif-display text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.05] tracking-tight">
               Learn anything,<br />
@@ -107,8 +107,8 @@ export default function Home() {
             <h2 className="font-serif-display text-4xl sm:text-5xl font-semibold leading-tight mb-6">
               A loop that gets smarter every lesson.
             </h2>
-            <p className="text-[#1a1c1a]/70 leading-relaxed">
-              Take a look how it works
+           <p className="text-[#1a1c1a]/70 leading-relaxed">
+            From the moment you pick a course, Edu-AI starts learning about you. It watches which videos you struggle with, which quiz questions you get wrong, and which doubts you ask the AI tutor. Then it uses all that data to adapt your learning path in real-time — making sure you're always challenged, but never overwhelmed.
             </p>
           </div>
           <ol className="space-y-5">

@@ -27,8 +27,8 @@ export const Footer = () => (
     </div>
     <div className="border-t border-[#1a1c1a]/10">
       <div className="max-w-7xl mx-auto px-6 py-5 text-xs text-[#1a1c1a]/50 flex flex-wrap justify-between gap-3">
-        <span>© 2026 Edu-AI Core. Built with care for learners.</span>
-        <span>Powered by Gemini · Whisper · Adaptive Bloom AI</span>
+        <span className="text-center"> 2025 Edu-AI Core. Built with care for learners.</span>
+        
       </div>
     </div>
   </footer>
